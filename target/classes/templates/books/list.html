@@ -1,0 +1,28 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org" style="width: 1266px; height: 280px; ">
+<head>
+<meta charset="ISO-8859-1">
+<title>Spring Framework Learning</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>"
+</head>
+<body>
+
+<p class="h1">Book List</p>
+<small class="text-muted">contained within the H2 in memmory database.</small>
+
+<table class="table">
+	<tr>
+	<th>ID</th>
+	<th>Title</th>
+	<th>Publisher</th>	
+	</tr>
+	
+	<tr th:each="book : ${books}">
+		<td th:text="${book.id}"></td>
+		<td th:text="${book.title}"></td>
+		<td th:text="${book.publisher.name}"></td>
+		
+	</tr></table>
+</body>
+</html>
